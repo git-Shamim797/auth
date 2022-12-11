@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function login()
+{
+var def,v1,v2,v3,v4;
+def=document.getElementById("chk").value;
+v1="sarfaraz";
+v2="Sarfaraz";
+v3="alisha";
+v4="Alisha";
+if(def==v1||def==v2||def==v3||def==v4)
+{
+alert("Login Successfully !");
+window.location.assign("1.html")
+}
+else
+{
+alert("Login Fail Try Again !");
+document.getElementById("Error").innerHTML="<u>Invalid Name.</u>";
+}
+//document.getElementById("Error").innerHTML = "Hello World";
+}
+</script>
+</head>
+<body>
+<center>
+<h1><marquee><u>Warning Only Friends names are accepted !.</u></marquee></h1>
+<p>Enter your Name:</p>
+<input type="text" placeholder="Name" id="chk">
+<p style="color:red" id="Error"></p>
+<button onclick="login()">Login</button></center>
+</body>
+</html>

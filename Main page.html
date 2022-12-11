@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+body{background-color:#DAF7A6;}
+</style>
+<script>
+function login()
+{
+var u,v1,p,s;
+p="A@1234r5678";
+v1="Sarfaraz";
+u=document.getElementById("chk").value
+s=document.getElementById("psk").value
+if(u==v1&&s==p)
+{
+alert("Login Successfully !");
+window.location.assign("https://sites.google.com/view/dimension-paradise/home")
+}
+else
+{
+alert("Login Fail Try Again !");
+/*alert("Login Fail !")
+document.getElementById("Error").innerHTML="Invalid Name";*/
+}
+//document.getElementById("Error").innerHTML = "Hello World";
+}</script>
+</head>
+<body>
+<center>
+<h1><marquee><u>Warning Only Friends names are accepted !</u>.</marquee></h1>
+<p>Enter your Name:</p><br>
+<input type="text" placeholder="Unique no." id="chk"><br><br>
+<input type="password" placeholder="password" id="psk"><br><br>
+<span id="Error"></span><br>
+<button onclick="login()">Login</button>
+</center>
+</body>
+</html>
