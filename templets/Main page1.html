@@ -6,12 +6,14 @@ body{background-color:#DAF7A6;}
 <script>
 function login()
 {
-var u,v1,p,s;
-p=1;
+var u,v1,p1,s,v2,p2;
+p1=1;
 v1=1;
+v2=2;
+p2=2;
 u=document.getElementById("chk").value
 s=document.getElementById("psk").value
-if(u==v1&&s==p)
+if(u==v1&&s==p||u==v2&&s==p2)
 {
 alert("Login Successfully !");
 window.location.assign("1.html")
@@ -19,8 +21,8 @@ window.location.assign("1.html")
 else
 {
 alert("Login Fail Try Again !");
-/*alert("Login Fail !")
-document.getElementById("Error").innerHTML="Invalid Name";*/
+
+document.getElementById("Error").innerHTML="Invalid User Name or Password !";
 }
 //document.getElementById("Error").innerHTML = "Hello World";
 }</script>
@@ -31,7 +33,7 @@ document.getElementById("Error").innerHTML="Invalid Name";*/
 <p>Enter your Name:</p>
 <input type="text" placeholder="Unique no." id="chk">
 <input type="password" placeholder="password" id="psk">
-<span id="Error"></span>
+<p id="Error"></p>
 <button onclick="login()">Login</button>
 </center>
 </body>

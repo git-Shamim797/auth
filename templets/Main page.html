@@ -2,36 +2,42 @@
 <head>
 <style>
 body{background-color:#DAF7A6;}
+#Error{
+    color: red;
+    font-weight: 500;
+    transition: ease-in-out;
+}
 </style>
 <script>
 function login()
 {
 var u,v1,p,s;
-p="A@1234r5678";
-v1="Sarfaraz";
+p1="A@1234r5678";
+v1="Admin1";
+v2="Admin2";
+p2="A@1234s5678";
 u=document.getElementById("chk").value
 s=document.getElementById("psk").value
-if(u==v1&&s==p)
+if(u==v1&&s==p||u==v2&&s==p2)
 {
 alert("Login Successfully !");
-window.location.assign("https://sites.google.com/view/dimension-paradise/home")
+window.location.assign("1.html")
 }
 else
 {
 alert("Login Fail Try Again !");
-/*alert("Login Fail !")
-document.getElementById("Error").innerHTML="Invalid Name";*/
+document.getElementById("Error").innerHTML="Invalid User Name or Password !";
 }
-//document.getElementById("Error").innerHTML = "Hello World";
+
 }</script>
 </head>
 <body>
 <center>
-<h1><marquee><u>Warning Only Friends names are accepted !</u>.</marquee></h1>
+<h1><marquee><u>Warning Only admin login is accepted !</u>.</marquee></h1>
 <p>Enter your Name:</p><br>
-<input type="text" placeholder="Unique no." id="chk"><br><br>
+<input type="text" placeholder="UserName" id="chk"><br><br>
 <input type="password" placeholder="password" id="psk"><br><br>
-<span id="Error"></span><br>
+<p id="Error"></p><br>
 <button onclick="login()">Login</button>
 </center>
 </body>
