@@ -3,17 +3,114 @@
 <style>
 p
 {
-color:green;
+color:rgb(128, 6, 0);
+font-size: 25px;
+font-weight: 600;
+
 }
 p::selection{
 color:#242392;
 background-color:#f6bfe2;}
+.code
+{
+    background-color: grey;
+    padding: 15px;
+    border-radius: 10px;
+}
+.op{
+    background-color: rgb(144, 244, 156);
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+li{
+    font-size: 25px;
+    padding: 15px;
+}
 </style>
 </head>
 <body>
-<p>Welcome back sir! Nice to meet you.</p>
-<p>
-Hello
-</p>
+    <div class="container">
+        <div class="top">
+            <h1>JavaScript operators and variables.</h1>
+        </div>
+        <div class="variable">
+            <ol>
+                <h2>There are three ways to define a variable in JavaScript.</h2>
+                <li>By using let.</li>
+                <span>Here the variable is assigned by using let :- </span>
+                <span id="let"></span>
+                <li>By using var.</li>
+                <span>Here the variable is assigned by using var :- </span>
+                <span id="var"></span>
+                <li>By using const.</li>
+                <span>Here the variable is assigned by using const :- </span>
+                <span id="const"></span>
+            </ol>
+        </div>
+        <div class="operator">
+            <h2>By using the operators we can also perform the operation on the variables</h2>
+            <ol>
+            <li>Assignment operator</li>
+            <div class="code">
+                <span>var a=5;<br>let b=6;<br>const c=9;</span></div>
+                <p>This operator is used to assign the value to the variables.</p>
+            
+            <li>Arithmetic operator</li><ul><li>Addition.</li></ul>
+            <div class="code">
+                <span>var a=5;<br>var b=6;<br>var d = a + b;</span>
+                </div><p id="add" class="op"></p>
+                <p>This operator is used to addition  the value of the variables.</p>
+            <ul><li>Substraction.</li></ul>
+            <div class="code">
+            <span>var a=5;<br>var b=6;<br>var d = a - b;</span></div>
+                <p id="sub" class="op"></p>
+                <p>This operator is used to Substract  the value of the variables.</p>
+            
+            <ul><li>Multiplication.</li></ul>
+            <div class="code">
+            <span>var a=5;<br>var b=6;<br>var d = a * b;</span>
+        </div><p id="mul" class="op"></p>
+                <p>This operator is used to Multiply  the value of the variables.</p>
+           
+            <ul><li>Increment.</li></ul>
+            <div class="code">
+            <span>var a=5;<br>a++</span>
+        </div><p id="inc" class="op"></p>
+                <p>This operator is used to Increment the value of the variables by 1.</p>
+
+                <ul><li>Decrement.</li></ul>
+                <div class="code">
+                <span>var a=5;<br>a--</span>
+            </div><p id="dec" class="op"></p>
+                <p>This operator is used to Decrement the value of the variables by 1.</p>
+            </div>
+        </ol>
+        </div>
+    </div>
+    <script>
+        var a=5;
+        let b=6;
+        const c=9;
+        document.getElementById("let").innerHTML=b;
+        document.getElementById("var").innerHTML=a;
+        document.getElementById("const").innerHTML=c;
+        //Addition
+        var d=a+b;
+        document.getElementById("add").innerHTML=d;
+        //substraction
+        d=a-b;
+        document.getElementById("sub").innerHTML=d;
+        //multiplication
+        d=a*b
+        document.getElementById("mul").innerHTML=d;
+        //Increment
+        a++;
+        document.getElementById("inc").innerHTML=a;
+        //decrement
+        a--
+        document.getElementById("dec").innerHTML=a;
+    </script>
 </body>
 </html>
